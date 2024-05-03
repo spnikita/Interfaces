@@ -7,7 +7,9 @@ namespace Interfaces.Task1
         static void Main(string[] args)
         {
             Console.WriteLine("\tКонсольный мини-калькулятор, складывающий два числа.");
-            
+
+            ICalculator calculator = new Calculator();
+
             while (true)
             {
                 Console.WriteLine();
@@ -15,9 +17,7 @@ namespace Interfaces.Task1
                 var firstTerm = ReadNumber();
 
                 Console.Write("Введите второе слагаемое: ");
-                var secondTerm = ReadNumber();
-
-                ICalculator calculator = new Calculator();
+                var secondTerm = ReadNumber();               
 
                 try
                 {
